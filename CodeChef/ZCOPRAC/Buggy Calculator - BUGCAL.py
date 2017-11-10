@@ -1,7 +1,3 @@
-# For timing functions - remove before submitting code
-import profile
-
-
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
@@ -24,10 +20,6 @@ def main():
 
 	# Single line, multiple output
 	stdout.write(" ".join([str1(N), str1(k), str1(s)]))
-
-
-# Timing functions
-profile.run('main()')
 
 
 main()
