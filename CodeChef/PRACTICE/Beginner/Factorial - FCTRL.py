@@ -4,11 +4,14 @@ def main():
 	pl = stdout.write
 	int1 = int
 	str1 = str
-	xr1 = xrange
+	xr = xrange
 	sum1 = sum
-	for _ in xr1(int1(rl())):
+	arr = [5]
+	for k in xr(1, 13):
+		arr[k] = arr[k-1] * 5
+	for _ in xr(int1(rl())):
 		n = int1(rl())
-		c = sum1(n/5**i for i in xr1(1, 13))
+		c = sum1(n/i for i in arr)
 		pl(str1(c)+"\n")
 
 
