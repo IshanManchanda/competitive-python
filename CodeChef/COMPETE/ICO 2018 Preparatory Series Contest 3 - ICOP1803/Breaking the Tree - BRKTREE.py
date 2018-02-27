@@ -3,15 +3,15 @@ def main():
 	rl = stdin.readline
 	int1 = int
 
-	N, Q = map(int1, rl().split())
+	number, Q = map(int1, rl().split())
 	A = [int1(x) for x in rl().split()]
 	V = []
 	Vd = []
 	D = []
 	Dt = []
-	for i in xrange(N-1):
+	for i in range(number-1):
 		V.append(tuple(x for x in rl().split()))
-	for i in xrange(Q-1):
+	for i in range(Q-1):
 		D.append(int1(rl()))
 
 

@@ -5,15 +5,15 @@ def main():
 	map1 = map
 	str1 = str
 
-	T = int1(rl())
-	for i in xrange(T):
-		L, R = map1(int1, rl().split())
-		if L % 6 != 0:
-			L += (6 - (L % 6))
-		R -= R % 6
-		L = L / 6
-		R = R / 6
-		stdout.write(str1((R - L + 1) * (6 * L + (R - L) * 3)) + "\n")
+	tests = int1(rl())
+	for i in range(tests):
+		left, right = map1(int1, rl().split())
+		if left % 6 != 0:
+			left += (6 - (left % 6))
+		right -= right % 6
+		left = left / 6
+		right = right / 6
+		stdout.write(str1((right - left + 1) * (6 * left + (right - left) * 3)) + "\n")
 
 
 main()

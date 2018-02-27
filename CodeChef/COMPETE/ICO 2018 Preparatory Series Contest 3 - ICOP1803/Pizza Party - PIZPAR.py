@@ -7,20 +7,19 @@ def main():
 	i = 0
 
 	M, N = map(int1, rl().split())
-	A = sorted([int1(x) for x in rl().split()], reverse=True)
+	array = sorted([int1(x) for x in rl().split()], reverse=True)
 
 	while N:
-		if N >= A[i]:
-			N -= A[i]
-			a(A[i])
+		if N >= array[i]:
+			N -= array[i]
+			a(array[i])
 		else:
 			a(N)
 			N = 0
 		i += 1
-	C.extend([0] * len(A[i:]))
-	S = sum([(x**2 + x + 2) / 2 for x in C])
+	C.extend([0] * len(array[i:]))
 
-	stdout.write(str(S))
+	stdout.write(str(sum([(x ** 2 + x + 2) / 2 for x in C])))
 
 
 main()

@@ -1,13 +1,13 @@
 def s(n, prime, primesquare, a):
-	for i in xrange(2, n):
+	for i in range(2, n):
 		prime[i] = True
 	prime[1] = False
-	for i in xrange(n * n + 1):
+	for i in range(n * n + 1):
 		primesquare = False
 	p = 2
 	while p * p <= n:
 		if prime[p]:
-			for i in xrange(2*p, n, p):
+			for i in range(2*p, n, p):
 				prime[i] = False
 
 
@@ -17,7 +17,7 @@ def main():
 	int1 = int
 	T = int1(rl())
 
-	for i in xrange(T):
+	for i in range(T):
 		pass
 
 
