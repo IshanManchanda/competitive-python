@@ -6,9 +6,9 @@ def main():
 	str1 = str
 	list1 = list
 	map1 = map
-	xrange = range
+	range1 = range
 
-	for _ in xrange(int1(rl())):
+	for _ in range1(int1(rl())):
 		_, _ = map1(int1, rl().split())
 		D = list1(map1(int1, rl().split()))
 		Qs = list1(map1(int1, rl().split()))

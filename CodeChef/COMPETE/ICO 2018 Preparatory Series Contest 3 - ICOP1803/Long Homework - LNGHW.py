@@ -10,7 +10,7 @@ def main():
 	a = i.append
 	R = []
 	b = R.append
-	for j in xrange(Q):
+	for j in range(Q):
 		t = rl().split()
 		a(int1(t[0]))
 		b(int1(t[1]))
@@ -19,7 +19,7 @@ def main():
 
 	for k in range(Q):
 		try:
-			index = [x for x in xrange(len(m) - 1) if m[x] == R[k]][i[k] - 1]
+			index = [x for x in range(len(m) - 1) if m[x] == R[k]][i[k] - 1]
 			stdout.write(str(A.index(As[index]) + 1) + "\n")
 		except Exception:
 			stdout.write("-1\n")

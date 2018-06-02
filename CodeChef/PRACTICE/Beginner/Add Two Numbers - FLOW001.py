@@ -7,7 +7,7 @@ def main():
 	sum1 = sum
 	map1 = map
 
-	for _ in xrange(int1(rl())):
+	for _ in range(int1(rl())):
 		pl(str1(sum1(map1(int1, rl().split())))+'\n')
 
 

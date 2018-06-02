@@ -5,7 +5,7 @@ def main():
 
 	N, k = map(int1, rl().split())
 	s = sorted([int1(x) for x in rl().split()])
-	for i in xrange(N):
+	for i in range(N):
 		if s[i] > k:
 			del s[i:]
 			break

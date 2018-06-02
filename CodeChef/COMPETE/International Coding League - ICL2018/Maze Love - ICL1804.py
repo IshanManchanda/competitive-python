@@ -7,7 +7,7 @@ def main():
 	r1 = range
 
 	t = int1(rl())
-	for i in r1(t):
+	for _ in r1(t):
 		x, y, n, s, e, w, p = [int1(x) for x in rl().split()]
 		c = (n * y) + (e * x)
 		if c > p:

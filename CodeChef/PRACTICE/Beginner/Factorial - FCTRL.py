@@ -4,7 +4,7 @@ def main():
 	pl = stdout.write
 	int1 = int
 	str1 = str
-	xr = xrange
+	xr = range
 	sum1 = sum
 	arr = [5]
 	for k in xr(1, 13):

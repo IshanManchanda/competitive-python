@@ -3,10 +3,10 @@ def empty():
 
 
 def main():
-	t = int(raw_input())
+	t = int(input())
 	d = []
-	for i in xrange(t):
-		d.append(raw_input())
+	for i in range(t):
+		d.append(input())
 
 	for date in d:
 		md = date[0] + date[1] + date[3] + date[4]
@@ -20,9 +20,9 @@ def main():
 			yyl[int(c) - 1] += 1
 
 		if mdl == yyl:
-			print "Lucky Watson"
+			print("Lucky Watson")
 		else:
-			print "Unlucky Watson"
+			print("Unlucky Watson")
 
 
 if __name__ == '__main__':

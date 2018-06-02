@@ -2,7 +2,7 @@ def move_zeros(array):
 	a = []
 	n = 0
 	for i in array:
-		if i != 0 or (type(i) != type(0) and type(i) != type(0.0)):
+		if i != 0 or not (i.isinstance(0) or i.isinstance(0)):
 			a.append(i)
 		else:
 			n += 1

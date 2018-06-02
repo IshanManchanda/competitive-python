@@ -6,7 +6,7 @@ def main():
 	str1 = str
 	map1 = map
 
-	for _ in xrange(int1(rl())):
+	for _ in range(int1(rl())):
 		a, b = map1(int1, rl().split())
 		pl(str1(a % b) + '\n')
 

@@ -6,7 +6,7 @@ def main():
 	a = b.append
 
 	N, k = map(int1, rl().split())
-	for i in xrange(N):
+	for i in range(N):
 		a(int1(rl()))
 	n = len([x / x for x in b if ((x % k) == 0)])
 

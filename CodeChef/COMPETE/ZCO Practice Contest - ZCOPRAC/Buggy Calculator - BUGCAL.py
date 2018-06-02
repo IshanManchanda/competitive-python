@@ -8,7 +8,7 @@ def main():
 	N = int1(rl())
 	b = []
 	a = b.append
-	for i in xrange(N):
+	for i in range(N):
 		a(int1(stdin.readline()))
 
 	# Single line, multiple input

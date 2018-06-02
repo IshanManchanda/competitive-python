@@ -5,7 +5,7 @@ def main():
 	int1 = int
 	str1 = str
 
-	for _ in xrange(int1(rl())):
+	for _ in range(int1(rl())):
 		pl(str1((int1(rl())/2)+1)+'\n')
 
 

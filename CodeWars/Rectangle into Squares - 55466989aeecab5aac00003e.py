@@ -1,13 +1,13 @@
-def sqInRect(lng, wdth):
-	if lng == wdth:
+def sqInRect(length, width):
+	if length == width:
 		return None
 	a = []
 	while True:
-		if lng == wdth:
-			return a + [lng]
-		if lng > wdth:
-			a += [wdth]
-			lng = lng - wdth
+		if length == width:
+			return a + [length]
+		if length > width:
+			a += [width]
+			length = length - width
 		else:
-			a += [lng]
-			wdth = wdth - lng
+			a += [length]
+			width = width - length

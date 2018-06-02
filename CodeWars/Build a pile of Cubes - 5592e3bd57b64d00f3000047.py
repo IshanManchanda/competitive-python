@@ -1,11 +1,11 @@
 def find_nb(m):
-	sum = 0
+	s = 0
 	i = 1
 
 	while True:
-		sum += i ** 3
-		if sum > m:
+		s += i ** 3
+		if s > m:
 			return -1
-		if sum == m:
+		if s == m:
 			return i
 		i += 1

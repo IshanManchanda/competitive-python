@@ -5,7 +5,7 @@ def main():
 	T = int1(rl())
 	l = []
 	a = l.append
-	for _ in xrange(T):
+	for _ in range(T):
 		a(int1(rl()))
 	stdout.write("\n".join(str(x) for x in sorted(l)))
 
