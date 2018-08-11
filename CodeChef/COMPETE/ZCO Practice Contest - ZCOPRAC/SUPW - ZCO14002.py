@@ -1,14 +1,15 @@
-tab = [None] * (2 * 10 ** 5)
+tab = {}
 
 
 def find_min(t, i):
-	if tab[i]:
+	if i in tab:
 		return tab[i]
 	if len(t[i:]) < 3:
 		return 0
 	if len(t[i:]) == 3:
 		return min(t)
-	return min(t[i] + find_min(t, i + 1), t[i + 1] + find_min(t, i + 2), t[i + 2] + find_min(t, i + 3))
+	tab[i] = min(t[i] + find_min(t, i + 1), t[i + 1] + find_min(t, i + 2), t[i + 2] + find_min(t, i + 3))
+	return tab[i]
 
 
 def main():
