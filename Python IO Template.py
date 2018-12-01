@@ -5,6 +5,7 @@ import profile
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
+	wl = stdout.write
 	int1 = int
 	str1 = str
 
@@ -13,17 +14,17 @@ def main():
 	b = []
 	a = b.append
 	for i in range(N):
-		a(int1(stdin.readline()))
+		a(int1(rl()))
 
 	# Single line, multiple input
 	N, k = map(int1, rl().split())
 	s = [int1(x) for x in rl().split()]
 
 	# Single line, single output
-	stdout.write(str1(b))
+	wl(str1(b))
 
 	# Single line, multiple output
-	stdout.write(" ".join([str1(N), str1(k), str1(s)]))
+	wl(" ".join([str1(N), str1(k), str1(s)]))
 
 
 # Timing functions
