@@ -1,12 +1,13 @@
 def main():
-	n = [1, 2]
-	a = n.append
-	l = 2
-	while n[l - 1] < 4000000:
-		a(n[l - 1] + n[l - 2])
-		l += 1
+	arr = [1, 2]
+	append = arr.append
+	n = 2
 
-	print(sum(x for x in n if x % 2 == 0))
+	while arr[n - 1] < 4000000:
+		append(arr[n - 1] + arr[n - 2])
+		n += 1
+
+	print(sum(x for x in arr if x % 2 == 0))
 
 
 main()

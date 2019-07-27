@@ -10,25 +10,24 @@ def main():
 	str1 = str
 
 	# Single line, single input
-	N = int1(rl())
+	n = int1(rl())
 	b = []
 	a = b.append
-	for i in range(N):
+	for i in range(n):
 		a(int1(rl()))
 
 	# Single line, multiple input
-	N, k = map(int1, rl().split())
+	n, k = map(int1, rl().split())
 	s = [int1(x) for x in rl().split()]
 
 	# Single line, single output
 	wl(str1(b))
 
 	# Single line, multiple output
-	wl(" ".join([str1(N), str1(k), str1(s)]))
+	wl(" ".join([str1(n), str1(k), str1(s)]))
 
 
 # Timing functions
 profile.run('main()')
-
 
 main()
