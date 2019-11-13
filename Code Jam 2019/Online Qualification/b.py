@@ -9,7 +9,8 @@ def main():
 	for tn in range(1, t):
 		n = int1(rl())
 		moves = rl().strip()
-		new_moves = ['S' if moves[i] == 'E' else 'E' for i in range1(2 * n - 2)]
+		new_moves = ['S' if moves[i] == 'E' else 'E' for i in range1(2 * n -
+		                                                             2)]
 		wl('Case #%d: %s\n' % (tn, ''.join(new_moves)))
 
 

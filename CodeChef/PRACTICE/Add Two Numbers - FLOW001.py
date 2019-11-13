@@ -8,7 +8,7 @@ def main():
 	map1 = map
 
 	for _ in range(int1(rl())):
-		pl(str1(sum1(map1(int1, rl().split())))+'\n')
+		pl(str1(sum1(map1(int1, rl().split()))) + '\n')
 
 
 main()

@@ -28,7 +28,8 @@ def main():
 
 		le = len(epeople)
 		for i in range(1, le):
-			for j in range(epeople[i - 1][0] + 1, min(epeople[i][0] + 1, q - 1)):
+			for j in range(epeople[i - 1][0] + 1,
+				min(epeople[i][0] + 1, q - 1)):
 				xcount[j] += i
 		if le != 0:
 			for i in range(epeople[le - 1][0] + 1, q):
@@ -44,7 +45,8 @@ def main():
 
 		ln = len(npeople)
 		for i in range(1, ln):
-			for j in range(npeople[i - 1][0] + 1, min(npeople[i][0] + 1, q - 1)):
+			for j in range(npeople[i - 1][0] + 1,
+				min(npeople[i][0] + 1, q - 1)):
 				ycount[j] += i
 		if ln != 0:
 			for i in range(npeople[ln - 1][0] + 1, q):
@@ -58,7 +60,8 @@ def main():
 			for i in range(speople[ls - 1][0], q):
 				ycount[i] -= ls
 
-		wl('Case #%d: %d %d\n' % (tn, xcount.index(max(xcount)), ycount.index(max(ycount))))
+		wl('Case #%d: %d %d\n' % (
+		tn, xcount.index(max(xcount)), ycount.index(max(ycount))))
 
 
 main()

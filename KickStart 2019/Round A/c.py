@@ -31,11 +31,11 @@ def main():
 						break
 
 				grid[i][j] = md
-				# if md > mmd:
-				# 	mmds = [(i, j)]
-				# 	mmd = md
-				# elif md == mmd:
-				# 	mmds.append((i, j))
+			# if md > mmd:
+			# 	mmds = [(i, j)]
+			# 	mmd = md
+			# elif md == mmd:
+			# 	mmds.append((i, j))
 
 		nmmd = 1001
 		# for office in mmds:

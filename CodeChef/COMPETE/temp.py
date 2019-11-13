@@ -23,19 +23,22 @@ def main():
 			ct = a[team]
 
 			if seat == 1:
-				wl((ct[0][0] if ct[0][1] == 'Y' else ct[1][0] if ct[1][1] == 'Y' else ct[2][0]) + '\n')
+				wl((ct[0][0] if ct[0][1] == 'Y' else ct[1][0] if ct[1][
+					                                                 1] == 'Y'
+				else
+				ct[2][0]) + '\n')
 			elif seat == 2:
 				wl((
-					min1(ct[0][0], ct[1][0]) if ct[2][1] == 'Y' else
-					min1(ct[1][0], ct[2][0]) if ct[0][1] == 'Y' else
-					min1(ct[2][0], ct[0][0])
-				) + '\n')
+					   min1(ct[0][0], ct[1][0]) if ct[2][1] == 'Y' else
+					   min1(ct[1][0], ct[2][0]) if ct[0][1] == 'Y' else
+					   min1(ct[2][0], ct[0][0])
+				   ) + '\n')
 			else:
 				wl((
-					max1(ct[0][0], ct[1][0]) if ct[2][1] == 'Y' else
-					max1(ct[1][0], ct[2][0]) if ct[0][1] == 'Y' else
-					max1(ct[2][0], ct[0][0])
-				) + '\n')
+					   max1(ct[0][0], ct[1][0]) if ct[2][1] == 'Y' else
+					   max1(ct[1][0], ct[2][0]) if ct[0][1] == 'Y' else
+					   max1(ct[2][0], ct[0][0])
+				   ) + '\n')
 
 
 main()

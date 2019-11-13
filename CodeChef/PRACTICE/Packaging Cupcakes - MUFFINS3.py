@@ -6,7 +6,7 @@ def main():
 	str1 = str
 
 	for _ in range(int1(rl())):
-		pl(str1((int1(rl())/2)+1)+'\n')
+		pl(str1((int1(rl()) / 2) + 1) + '\n')
 
 
 main()

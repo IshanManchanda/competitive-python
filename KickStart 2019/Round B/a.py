@@ -21,7 +21,8 @@ def main():
 		for i in range(q):
 			l, r = map(int1, rl().split())
 
-			letts = [arr[r][x] - arr[l - 1][x] for x in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
+			letts = [arr[r][x] - arr[l - 1][x] for x in
+				'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 			odd_used = False
 			for let in letts:
 				if let % 2 == 1:

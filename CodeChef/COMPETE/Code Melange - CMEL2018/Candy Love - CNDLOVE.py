@@ -7,7 +7,8 @@ def main():
 	t = int1(rl())
 	for i in range(t):
 		rl()
-		wl("NO\n" if sum([int1(x) for x in rl().split()]) % 2 == 0 else "YES\n")
+		wl("NO\n" if sum([int1(x) for x in rl().split()]) % 2 == 0 else 
+		"YES\n")
 
 
 main()

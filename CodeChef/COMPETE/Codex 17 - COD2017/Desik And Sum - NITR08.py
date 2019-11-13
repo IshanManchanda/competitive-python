@@ -13,7 +13,8 @@ def main():
 		right -= right % 6
 		left = left / 6
 		right = right / 6
-		stdout.write(str1((right - left + 1) * (6 * left + (right - left) * 3)) + "\n")
+		stdout.write(
+			str1((right - left + 1) * (6 * left + (right - left) * 3)) + "\n")
 
 
 main()

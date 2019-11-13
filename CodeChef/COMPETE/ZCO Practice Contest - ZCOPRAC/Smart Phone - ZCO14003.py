@@ -1,16 +1,15 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO14003
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
-	int1 = int
-	b = []
-	a = b.append
 
-	N = int1(rl())
-	for i in range(N):
-		a(int1(rl()))
+	a = []
+	n = int(rl())
+	for i in range(n):
+		a.append(int(rl()))
+	a.sort(reverse=True)
 
-	b = sorted(b, reverse=True)
-	stdout.write(str(max([((x+1)*b[x]) for x in range(N)])))
+	stdout.write(str(max(x * (i + 1) for i, x in enumerate(a))))
 
 
 main()

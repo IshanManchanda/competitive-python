@@ -23,7 +23,8 @@ def main():
 			# Remove last person
 			m -= s[up] - s[i - 1]
 
-			# Everyone needs to reach level of s[up] so diff = s[up] - s[up - 1]
+			# Everyone needs to reach level of s[up]
+			# so diff = s[up] - s[up - 1]
 			if s[up] != s[up - 1]:
 				d = s[up] - s[up - 1]
 				m += d * p

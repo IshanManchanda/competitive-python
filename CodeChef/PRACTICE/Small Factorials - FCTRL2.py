@@ -10,7 +10,7 @@ def main():
 		for j in range(n):
 			a *= n
 			n -= 1
-		pl(str1(a)+"\n")
+		pl(str1(a) + "\n")
 
 
 main()

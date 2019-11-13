@@ -8,7 +8,7 @@ def main():
 		s = rl().strip()
 		n = len1(s)
 		m = n // 2
-		wl(str1(m * (n - m))+'\n')
+		wl(str1(m * (n - m)) + '\n')
 
 
 main()

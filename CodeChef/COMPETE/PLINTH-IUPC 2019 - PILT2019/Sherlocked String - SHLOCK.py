@@ -10,7 +10,8 @@ def main():
 
 	for _ in range1(int1(rl())):
 		a = {key: -1 for key in 'abcdefghijklmnopqrstuvwxyz'}
-		b = {'abcdefghijklmnopqrstuvwxyz'[i]: 'abcdefghijklmnopqrstuvwxyz'[25 - i] for i in range(26)}
+		b = {'abcdefghijklmnopqrstuvwxyz'[i]: 'abcdefghijklmnopqrstuvwxyz'[
+			25 - i] for i in range(26)}
 		s = rl().strip()
 		l = len1(s) - 1
 		for i in range1(l + 1):

@@ -1,35 +1,28 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO14001
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
-	int1 = int
-	str1 = str
-	max1 = max
-	min1 = min
 
-	N, H = map(int1, rl().split())
+	n, h = (int(x) for x in rl().split())
+	a = [int(x) for x in rl().split()]
+	cs = [int(x) for x in rl().split()]
+
 	p = b = 0
-	h = [int1(x) for x in rl().split()]
-	s = [int1(x) for x in rl().split()]
-
-	for i in s:
-		if i == 1:
-			p = max1(p-1, 0)
-		elif i == 2:
-			p = min1(p+1, N-1)
-		elif i == 3:
-			if b or (h[p] == 0):
-				continue
+	for c in cs:
+		if c == 1:
+			p = max(0, p - 1)
+		elif c == 2:
+			p = min(n - 1, p + 1)
+		elif c == 3 and not b and a[p] > 0:
+			a[p] -= 1
 			b = 1
-			h[p] -= 1
-		elif i == 4:
-			if (not b) or (h[p] == H):
-				continue
+		elif c == 4 and b and a[p] < h:
+			a[p] += 1
 			b = 0
-			h[p] += 1
 		else:
 			break
 
-	stdout.write(" ".join(str1(x) for x in h))
+	stdout.write(' '.join(str(x) for x in a))
 
 
 main()

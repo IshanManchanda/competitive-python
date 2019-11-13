@@ -1,18 +1,18 @@
 dp = [
-	[1, [
-		[]
-	]],
-	[1, [
-		[1]
-	]],
-	[2, [
-		[1, 1], [2]
-	]]
-] + [
-	[-1, [
+	     [1, [
+		     []
+	     ]],
+	     [1, [
+		     [1]
+	     ]],
+	     [2, [
+		     [1, 1], [2]
+	     ]]
+     ] + [
+	     [-1, [
 
-	]]
-] * 3
+	     ]]
+     ] * 3
 
 
 def milk(a):
@@ -22,9 +22,11 @@ def milk(a):
 		return dp[a]
 
 	# if a >= 160:
-	# 	b = milk(a - 1) + milk(a - 2) + milk(a - 4) + milk(a - 16) + milk(a - 32) + milk(a - 160)
+	# 	b = milk(a - 1) + milk(a - 2) + milk(a - 4) + milk(a - 16) + milk(a - 
+	# 	32) + milk(a - 160)
 	# elif a >= 32:
-	# 	b = milk(a - 1) + milk(a - 2) + milk(a - 4) + milk(a - 16) + milk(a - 32)
+	# 	b = milk(a - 1) + milk(a - 2) + milk(a - 4) + milk(a - 16) + milk(a -
+	# 	32)
 	# elif a >= 16:
 	# 	b = milk(a - 1) + milk(a - 2) + milk(a - 4) + milk(a - 16)
 	# elif a >= 4:
