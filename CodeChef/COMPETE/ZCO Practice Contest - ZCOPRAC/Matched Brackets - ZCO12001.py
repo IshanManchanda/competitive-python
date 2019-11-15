@@ -1,37 +1,41 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO12001
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
-	wl = stdout.write
-	int1 = int
-	str1 = str
 
-	d = md = s = ms = 0
-	mdp = sp = msp = 1
-	n = int1(rl())
-	b = rl().strip().split(' ')
+	n = int(rl())
+	bs = [int(x) for x in rl().split()]
 
-	for i in range(n):
-		if b[i] == '1':
-			if d == 0:
-				sp = i + 1
-			else:
-				s += 1
+	o = 0  # Currently open brackets
+	md = 0  # Max depth
+	mdp = 0  # Max depth position
+	cs = 0  # Current symbols
+	ms = 0  # Max symbols
+	csp = 0  # Current symbols start position
+	msp = 0  # Max symbols start position
 
-			d += 1
-			if d > md:
-				md = d
-				mdp = i
+	for i, b in enumerate(bs):
+		if b == 1:
+			if o == 0:
+				cs = 0
+				csp = i + 1
+			cs += 1
+			o += 1
+
 		else:
-			d -= 1
-			if d == 0:
-				if s > ms:
-					ms = s
-					msp = sp
-				s = 0
-			else:
-				s += 1
+			if o > md:
+				md = o
+				mdp = i
 
-	wl('%d %d %d %d' % (md, mdp + 1, ms + 2, msp))
+			cs += 1
+			o -= 1
+
+			if o == 0:
+				if cs > ms:
+					ms = cs
+					msp = csp
+
+	stdout.write('%d %d %d %d' % (md, mdp, ms, msp))
 
 
 main()

@@ -1,20 +1,20 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO15002
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
-	int1 = int
 
-	N, k = map(int1, rl().split())
-	s = sorted([int1(x) for x in rl().split()])
-	i = j = v = 0
+	n, k = (int(x) for x in rl().split())
+	a = [int(x) for x in rl().split()]
 
-	while i < N and j < N:
-		if s[j] - s[i] >= k:
-			v += N - j
-			i += 1
-		else:
+	a.sort()
+	i = j = s = 0
+	while j < n and i < n:
+		while j < n and a[j] - a[i] < k:
 			j += 1
+		s += n - j
+		i += 1
 
-	stdout.write(str(v))
+	stdout.write(str(s))
 
 
 main()
