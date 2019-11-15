@@ -1,25 +1,26 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO13003
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
-	int1 = int
 
-	N, k = map(int1, rl().split())
-	s = sorted([int1(x) for x in rl().split()])
-	for i in range(N):
-		if s[i] > k:
-			del s[i:]
+	n, k = (int(x) for x in rl().split())
+	a = [int(x) for x in rl().split()]
+
+	a.sort()
+	for i, x in enumerate(a):
+		if x > k:
+			del a[i:]
 			break
-	n = l = 0
-	r = len(s) - 1
 
-	while l < r:
-		if s[l] + s[r] < k:
-			n += r - l
-			l += 1
-		else:
-			r -= 1
+	i = s = 0
+	j = n - 1
+	while i < j:
+		while i < j and a[i] + a[j] >= k:
+			j -= 1
+		s += j - i
+		i += 1
 
-	stdout.write(str(n))
+	stdout.write(str(s))
 
 
 main()
