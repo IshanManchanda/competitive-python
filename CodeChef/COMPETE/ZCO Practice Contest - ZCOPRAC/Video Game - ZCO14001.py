@@ -9,10 +9,10 @@ def main():
 
 	p = b = 0
 	for c in cs:
-		if c == 1:
-			p = max(0, p - 1)
-		elif c == 2:
-			p = min(n - 1, p + 1)
+		if c == 1 and p != 0:
+			p -= 1
+		elif c == 2 and p != n - 1:
+			p += 1
 		elif c == 3 and not b and a[p] > 0:
 			a[p] -= 1
 			b = 1
