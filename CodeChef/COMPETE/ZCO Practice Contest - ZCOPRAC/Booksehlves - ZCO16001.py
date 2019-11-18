@@ -1,3 +1,6 @@
+# https://www.codechef.com/ZCOPRAC/problems/ZCO16001
+
+
 def move(b1, b2, k):
 	for _ in range(k):
 		# Ideal case: b2 has the N-largest numbers.
@@ -38,3 +41,46 @@ def main():
 
 
 main()
+
+'''
+from bisect import insort
+
+
+def main():
+	from sys import stdin, stdout
+	rl = stdin.readline
+
+	inp = [int(x) for x in rl().split()]
+	n, k = inp[:2]
+	s1, s2 = inp[2:n + 2], inp[n + 2:]
+	s1.sort()
+	s2.sort()
+
+	for _ in range(k):
+		insort(s1, s2[0])
+		del s2[0]
+		insort(s2, s1[-1])
+		del s1[-1]
+		if s2[0] >= s1[-1]:
+			break
+
+	s = s1[-1] + s2[-1]
+
+	s2, s1 = inp[2:n + 2], inp[n + 2:]
+	s1.sort()
+	s2.sort()
+
+	for _ in range(k):
+		insort(s1, s2[0])
+		del s2[0]
+		insort(s2, s1[-1])
+		del s1[-1]
+		if s2[0] >= s1[-1]:
+			break
+
+	s = min(s, s1[-1] + s2[-1])
+	stdout.write(str(s))
+
+main()
+
+'''
