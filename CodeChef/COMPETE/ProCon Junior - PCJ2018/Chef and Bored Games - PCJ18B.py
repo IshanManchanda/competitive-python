@@ -1,4 +1,4 @@
-# https://www.codechef.com/ICL2018/problems/ICL1801
+# https://www.codechef.com/PCJ2018/problems/PCJ18B
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline

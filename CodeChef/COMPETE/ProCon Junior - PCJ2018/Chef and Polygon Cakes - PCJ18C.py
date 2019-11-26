@@ -1,3 +1,4 @@
+# https://www.codechef.com/PCJ2018/problems/PCJ18C
 def main():
 	from sys import stdin, stdout
 	from math import gcd as g
