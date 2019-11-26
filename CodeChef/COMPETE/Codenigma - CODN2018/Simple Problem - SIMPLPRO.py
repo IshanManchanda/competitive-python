@@ -1,3 +1,4 @@
+# https://www.codechef.com/CODN2018/problems/SIMPLPRO
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline

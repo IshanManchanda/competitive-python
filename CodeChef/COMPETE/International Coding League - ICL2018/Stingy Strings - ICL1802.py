@@ -1,3 +1,4 @@
+# https://www.codechef.com/ICL2018/problems/ICL1802
 def main():
 	from sys import stdin, stdout
 	from math import gcd

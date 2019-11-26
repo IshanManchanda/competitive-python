@@ -1,3 +1,4 @@
+# https://www.codechef.com/COD2017/problems/NITR08
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline

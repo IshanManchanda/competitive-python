@@ -1,3 +1,4 @@
+# https://www.codechef.com/CMEL2018/problems/SINS
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline

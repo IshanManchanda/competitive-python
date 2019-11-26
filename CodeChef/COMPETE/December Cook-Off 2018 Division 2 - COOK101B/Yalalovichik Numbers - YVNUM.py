@@ -1,3 +1,4 @@
+# https://www.codechef.com/COOK101B/problems/YVNUM
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline

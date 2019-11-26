@@ -1,3 +1,4 @@
+# https://www.codechef.com/ICOP1803/problems/PIZPAR
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
