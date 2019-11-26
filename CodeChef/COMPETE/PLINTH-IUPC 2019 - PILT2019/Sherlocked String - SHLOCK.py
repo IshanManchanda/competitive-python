@@ -1,3 +1,4 @@
+# https://www.codechef.com/PILT2019/problems/SHLOCK
 def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
