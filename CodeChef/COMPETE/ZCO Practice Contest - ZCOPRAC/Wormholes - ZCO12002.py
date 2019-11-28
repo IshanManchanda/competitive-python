@@ -1,9 +1,9 @@
 # https://www.codechef.com/ZCOPRAC/problems/ZCO12002
-from bisect import bisect_left
 
 
 def main():
 	from sys import stdin, stdout
+	from bisect import bisect_left
 	rl = stdin.readline
 
 	n, nv, nw = (int(x) for x in rl().split())
