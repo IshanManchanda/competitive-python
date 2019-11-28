@@ -32,11 +32,11 @@ def main():
 		x, y = b[0], 0
 		while y < m:
 			t_cell = x + y
-			if t_cell < b[2]:
+			t_check = t_cell - b[2] - abs(y - b[1])
+			if t_check <= 0:  # Negative time is impossible
 				y += 1
 				continue
 
-			t_check = t_cell - b[2] - abs(y - b[1])
 			if t_check % b[3] == 0:
 				dp[x][y] = 0
 			y += 1
@@ -44,19 +44,14 @@ def main():
 		x, y = 0, b[1]
 		while x < n:
 			t_cell = x + y
-			if t_cell < b[2]:
+			t_check = t_cell - b[2] - abs(x - b[0])
+			if t_check <= 0:
 				x += 1
 				continue
 
-			t_check = t_cell - b[2] - abs(x - b[0])
 			if t_check % b[3] == 0:
 				dp[x][y] = 0
 			x += 1
-
-	# for row in dp:
-	# 	for val in row:
-	# 		print('X' if val else '.', end='  ')
-	# 	print()
 
 	for x in range(1, n):
 		dp[x][0] = dp[x][0] and dp[x - 1][0]
