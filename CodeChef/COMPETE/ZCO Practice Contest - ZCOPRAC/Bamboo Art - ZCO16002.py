@@ -3,6 +3,19 @@ def main():
 	from sys import stdin, stdout
 	rl = stdin.readline
 
+	# We want to find the maximum length of an AP formed by given lengths.
+
+	# Naive solution picks every pair of elements, O(n^2)
+	# and checks the array for other potential members. O(n)
+
+	# Instead, we can use DP.
+	# Notice that an AP is characterised by its last element and the difference
+	# i.e, AP(index, difference)
+
+	# For each element i, we can check all elements smaller than it.
+	# If a[i] - a[j] is d,
+	# the length of an AP(i, d) is 1 + length of AP(j, d)
+
 	inp = [int(x) for x in rl().split()]
 	n, a = inp[0], inp[1:]
 
