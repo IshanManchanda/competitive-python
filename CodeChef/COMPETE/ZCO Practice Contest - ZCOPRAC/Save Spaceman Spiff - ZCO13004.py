@@ -33,7 +33,7 @@ def main():
 		while y < m:
 			t_cell = x + y
 			t_check = t_cell - b[2] - abs(y - b[1])
-			if t_check <= 0:  # Negative time is impossible
+			if t_check < 0:  # Negative time is impossible
 				y += 1
 				continue
 
@@ -45,7 +45,7 @@ def main():
 		while x < n:
 			t_cell = x + y
 			t_check = t_cell - b[2] - abs(x - b[0])
-			if t_check <= 0:
+			if t_check < 0:
 				x += 1
 				continue
 
@@ -71,4 +71,3 @@ def main():
 
 
 main()
-
