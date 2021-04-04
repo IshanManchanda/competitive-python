@@ -4,7 +4,10 @@ def main():
 	rl = stdin.readline
 	wl = stdout.write
 
-	wl(str(int(sqrt(int(rl())))) + '\n')
+	a = rl().strip()
+	while len(a) > 1:
+		a = str(sum(int(x) for x in a))
+	wl(a + '\n')
 
 
 main()
